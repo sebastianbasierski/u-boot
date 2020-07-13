@@ -244,5 +244,25 @@
 			#address-cells = <1>;
 			#size-cells = <0>;
 		};
+
+		mmc2: mmc@1c11000 {
+			compatible = "allwinner,suniv-f1c100s-mmc",
+			             "allwinner,sun7i-a20-mmc";
+			reg = <0x01c10000 0x1000>;
+			clocks = <&ccu CLK_BUS_MMC1>,
+			         <&ccu CLK_MMC1>,
+			         <&ccu CLK_MMC1_OUTPUT>,
+			         <&ccu CLK_MMC1_SAMPLE>;
+			clock-names = "ahb",
+			              "mmc",
+			              "output",
+			              "sample";
+			resets = <&ccu RST_BUS_MMC1>;
+			reset-names = "ahb";
+			interrupts = <24>;
+			status = "disabled";
+			#address-cells = <1>;
+			#size-cells = <0>;
+		};		
 	};
 };
