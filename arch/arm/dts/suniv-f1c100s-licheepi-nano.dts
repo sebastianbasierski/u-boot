@@ -56,3 +56,7 @@
 	usb0_id_det-gpio = <&pio 4 2 GPIO_ACTIVE_HIGH>; /* PE2 */
 	status = "okay";
 };
+
+&mmc0 {
+	status = "okay";
+};
